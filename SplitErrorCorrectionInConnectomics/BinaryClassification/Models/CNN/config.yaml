@@ -1,0 +1,26 @@
+# config.yaml
+dataset:
+  path_train: './datasets/SNEMI3D/Train/' # './datasets/MouseCortex/Train/'
+  path_test: './datasets/SNEMI3D/Test/'
+  channels: 1
+  pointCloud_bool: False
+  nbr_coords: None 
+  aug_0: 3 # 5 ,15#nbr of transformations for the images having a 0
+  aug_1: 15 #25, 15  #nbr of transformations for the images having a 1
+  project_name: 'CNN_'
+  ckpt_save: './Models/CNN/ckptSNEMI/'
+  run_name: '1ChannelVolume_2' # name of the run to save on wandb
+  surface : False # take points on the surface only or not 
+  big : False
+
+model:
+  type: "CNN"
+
+training:
+  epochs: 200
+  lr: 0.0001
+  batch: 4
+  accumulate_grad_batches: 4
+
+testing:
+    treshold: 0.8

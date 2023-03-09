@@ -1,0 +1,26 @@
+# config.yaml
+dataset:
+  path_train: './datasets/SNEMI3D/Train/' 
+  path_test: './datasets/SNEMI3D/Test/'
+  channels: 2 # Point Cloud is compatible only with channels = 1.
+  pointCloud_bool: False
+  nbr_coords: 0
+  aug_0: 3  #nbr of transformations for the images having a 0
+  aug_1: 15  #nbr of transformations for the images having a 1
+  project_name: 'SiameseSNEMI' #Name of the project_name to save on wandb
+  ckpt_save: './Models/Siamese/ckptSNEMI/'
+  run_name: 'Volume' # name of the run to save on wandb
+  surface: False # take points on the surface only
+  big: False
+
+model:
+  type: "Siamese"
+
+training:
+  epochs: 200
+  lr: 0.0001
+  batch: 4
+  accumulate_grad_batches: 4
+  
+testing:
+    treshold: 0.8

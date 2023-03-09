@@ -1,0 +1,25 @@
+# config.yaml
+dataset:
+  path_train: './datasets/SNEMI3D/Train/'
+  path_test: './datasets/SNEMI3D/Test/'
+  channels: 1 # Point Cloud is compatible only with channels = 2.
+  pointCloud_bool: True
+  nbr_coords: 500 #BASE: 5000
+  aug_0: 0 #(5,25 for SNEMI to oversegment, 15,15 for Mouse) #nbr of transformations for the images having a 0
+  aug_1: 0 # #nbr of transformations for the images having a 1
+  project_name: 'PointCloudSNEMI'
+  ckpt_save: './Models/PointCloud/ckptSNEMI/'
+  run_name: 'PC1e-3_coords_500_ROT_'
+  surface: True # take points on the surface only
+  big: False
+model:
+  type: "PointCloud"
+
+training:
+  epochs: 300
+  lr: 0.001 # 0.001
+  batch: 8
+  accumulate_grad_batches: 4
+  
+testing:
+    treshold: 0.5
