@@ -17,8 +17,8 @@ These pairs are then subjected to classification by a Deep Learning model to det
 if any corrections are required. 
 
 
-### Prerequisites
-
-install the librairies with  "requirements.txt"
+### Installation
+All the code is provided in 
+Install the librairies with  "requirements.txt"
 
 ### 
