@@ -1,4 +1,8 @@
-# Project Title
+# Introduction
+
+This is the repository of my Master Thesis carried out in the Visual Computing Group at Harvard University.
+Please refer to the pdf of the paper for more details. 
+
 
 Axon segmentation is a fundamental task in neuroimaging analysis, enabling the inves-
 tigation of neuronal morphology, connectivity, and function. It is challenging due to
