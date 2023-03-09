@@ -1,4 +1,8 @@
-# Project Title
+# Introduction
+
+This is the repository of my Master Thesis carried out in the Visual Computing Group at Harvard University.
+Please refer to the pdf of the paper on this repository for more details. 
+
 
 Axon segmentation is a fundamental task in neuroimaging analysis, enabling the inves-
 tigation of neuronal morphology, connectivity, and function. It is challenging due to
@@ -13,8 +17,16 @@ These pairs are then subjected to classification by a Deep Learning model to det
 if any corrections are required. 
 
 
-### Prerequisites
+### Installation
+All the code is provided in the folder "SplitErrorCorrectionInConnectomics".
+Install the librairies with  "requirements.txt"
 
-install the librairies with  "requirements.txt"
-
-### 
+### Organization of the code
+The main file is "SplitErrorCorrectionInConnectomics". The different subfolers are descibed as follows: 
+  -  "BinaryClassification": Contains the models usels, the evaluation and the training files.
+  -  "correctedSegmentation": Contains the metrics to evaluate the final segmentation, as well as the corrected segmentation data of each model.
+  - "dataPreprocessing": Contains the files to take only the axons of the SNEMI3D dataset.
+  - "Endpoints": Contains the files to compute all the ground truth split errors and the skeletons to find the endpoints. 
+  - "datasets": contains the dataset for the SNEMI3D dataset.
+  
+Note that the dataset for AxonEM-M is not present, as well as the checkpoints of the models, due to their memory requirements. Please contact me at: "alexandredipiazza98@gmail.com" if you need them.
